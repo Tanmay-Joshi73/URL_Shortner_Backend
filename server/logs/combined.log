@@ -1,0 +1,7 @@
+[2025-03-26T04:56:00.864Z] [31MERROR[39M: Hey url is not given to the system
+[2025-03-26T05:06:03.853Z] [31MERROR[39M: The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+[2025-03-26T05:07:20.743Z] [31MERROR[39M: The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+[2025-03-26T05:07:26.050Z] [31MERROR[39M: Hey url is not given to the system
+[2025-03-26T05:08:38.541Z] [31MERROR[39M: The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+[2025-03-26T05:09:08.758Z] [31MERROR[39M: The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+[2025-03-26T05:09:53.743Z] [31MERROR[39M: The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
