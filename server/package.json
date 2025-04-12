@@ -6,12 +6,13 @@
   "author": "Tanmay Santosh Joshi",
   "type": "module",
   "main": "app.js",
- "scripts": {
-  "build": "tsc",
-  "start": "node dist/app.js",
-  "dev": "ts-node src/app.ts"
-},
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/app.js",
+    "dev": "ts-node src/app.ts"
+  },
   "dependencies": {
+    "bcryptjs": "^3.0.2",
     "body-parser": "^1.20.3",
     "cors": "^2.8.5",
     "crypto": "^1.0.1",
@@ -20,15 +21,19 @@
     "express-rate-limit": "^7.5.0",
     "helmet": "^8.1.0",
     "ioredis": "^5.6.0",
+    "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.13.0",
     "nanoid": "^5.1.5",
     "nodemon": "^3.1.9",
+    "redis": "^4.7.0",
     "redis-server": "^1.2.2",
     "shortid": "^2.2.17",
     "winston": "^3.17.0"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.17",
     "@types/express": "^5.0.1",
+    "@types/jsonwebtoken": "^9.0.9",
     "@types/mongoose": "^5.11.96",
     "@types/node": "^22.13.13",
     "@types/shortid": "^2.2.0",

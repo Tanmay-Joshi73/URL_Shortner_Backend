@@ -11,6 +11,7 @@ const Schema=new mongoose.Schema({
     unique:true,
     required:true
  },
+ user: { type: mongoose.Schema.Types.ObjectId, ref: 'userCollection' },
  Clicks:{
     type:Number,
     default:0
@@ -20,6 +21,6 @@ const Schema=new mongoose.Schema({
     default:Date.now(),
     required:true
  }
-})
+});
 
 export const Urls=mongoose.model("Urls",Schema)

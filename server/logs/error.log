@@ -5,3 +5,62 @@
 [2025-03-26T05:08:38.541Z] [31MERROR[39M: The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
 [2025-03-26T05:09:08.758Z] [31MERROR[39M: The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
 [2025-03-26T05:09:53.743Z] [31MERROR[39M: The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+[2025-03-26T10:34:40.763Z] [31MERROR[39M: The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+[2025-03-26T10:34:40.803Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:34:40.912Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:34:40.967Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:34:41.083Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:34:41.237Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:34:41.445Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:34:41.711Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:34:42.026Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:34:42.388Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:34:42.807Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:34:43.275Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:34:43.783Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:34:44.299Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:34:44.815Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:34:45.323Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:34:45.837Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:34:46.351Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:34:46.872Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:34:47.382Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:34:47.894Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:34:48.413Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:34:48.928Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:34:49.437Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:34:49.948Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:34:50.469Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:34:50.977Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:34:51.490Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:34:51.999Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:34:52.504Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:36:07.336Z] [31MERROR[39M: The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+[2025-03-26T10:36:07.348Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:36:07.358Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:36:07.424Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:36:07.534Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:36:07.701Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:36:07.920Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:36:08.178Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:36:08.494Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:37:35.746Z] [31MERROR[39M: The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+[2025-03-26T10:37:35.758Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:37:35.767Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:37:35.872Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:37:35.991Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:37:36.162Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:37:36.378Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:37:36.645Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:37:36.957Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:37:37.329Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:37:37.749Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:37:38.216Z] [31MERROR[39M: Redis Client Error:
+[2025-03-26T10:37:38.731Z] [31MERROR[39M: Redis Client Error:
+[2025-04-05T09:16:14.996Z] [31MERROR[39M: ❌ Error shortening URL: E11000 duplicate key error collection: test.urls index: LongUrl_1 dup key: { LongUrl: "https://web.whatsapp.com/" }
+[2025-04-05T15:44:58.796Z] [31MERROR[39M: ❌ Hey, URL is not given to the system
+[2025-04-05T15:45:38.285Z] [31MERROR[39M: ❌ Error shortening URL: E11000 duplicate key error collection: test.urls index: LongUrl_1 dup key: { LongUrl: "https://v0.dev/chat/ui-for-url-shortner-Lpzoa9nqQEe" }
+[2025-04-05T15:45:45.965Z] [31MERROR[39M: ❌ Error shortening URL: E11000 duplicate key error collection: test.urls index: LongUrl_1 dup key: { LongUrl: "https://v0.dev/chat/ui-for-url-shortner-Lpzoa9nqQEe" }
+[2025-04-05T16:02:32.976Z] [31MERROR[39M: ❌ Error shortening URL: E11000 duplicate key error collection: test.urls index: LongUrl_1 dup key: { LongUrl: "https://v0.dev/chat/ui-for-url-shortner-Lpzoa9nqQEe" }
+[2025-04-05T16:02:35.260Z] [31MERROR[39M: ❌ Error shortening URL: E11000 duplicate key error collection: test.urls index: LongUrl_1 dup key: { LongUrl: "https://v0.dev/chat/ui-for-url-shortner-Lpzoa9nqQEe" }
+[2025-04-05T16:02:47.615Z] [31MERROR[39M: ❌ Error shortening URL: E11000 duplicate key error collection: test.urls index: LongUrl_1 dup key: { LongUrl: "https://v0.dev/chat/ui-for-url-shortner-Lpzoa9nqQEe" }

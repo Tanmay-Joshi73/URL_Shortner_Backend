@@ -2,6 +2,8 @@ import { redisClient } from "../Config/config.js";
 import logger from "../Logger/Logger.js";
 import { Urls } from "../Model/Process.js";
 import { Random } from "../Controller/Functions.js";
+import { userCollection as userData } from "../Model/UserSchema.js";
+import { CreateToken } from "../Controller/Functions.js";
 export const Url_Shorten = async (req, res) => {
     const { URL } = req.body;
     const Origin = process.env.OriginalUrlServer;
@@ -50,10 +52,51 @@ export const Fetch = async (req, res) => {
     if (!Existing) {
         return res.send("Url Is Not Existed ");
     }
+    Existing.Clicks = Existing.Clicks + 1;
     const FullURl = Existing.LongUrl;
     const CacheExist = await redisClient.get(FullURl);
     if (!CacheExist) {
         await redisClient.set(FullURl, URL);
     }
+    Existing.save();
     return res.redirect(FullURl);
+};
+export const ShowUrl = async (req, res) => {
+    const data = await Urls.find().select('-id');
+    res.send(data);
+};
+export const CreateUser = async (req, res) => {
+    const { username, password, email } = req.body;
+    if (!username || !password || !email) {
+        return res.send('please provide the Everydata');
+    }
+    const userExist = await userData.findOne({ email: email });
+    if (userExist) {
+        return res.send("please Email already exist ,Please Login Instead");
+    }
+    const newUser = await userData.create({
+        username: username,
+        email: email,
+        password: password
+    });
+    const token = CreateToken(newUser._id, newUser.email);
+    res.cookie('token_id', token, {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "strict", // CSRF protection
+        maxAge: 24 * 60 * 60 * 1000 // 1 day
+    });
+};
+export const Login = async (req, res) => {
+    const { email, password } = req.body;
+    if (!email || !password)
+        return res.send('please provide the Everydata');
+    const userExist = await userData.findOne({ email: email });
+    if (!userExist) {
+        return res.send("Invalid Email Or Password");
+    }
+    // @ts-ignore
+    const isMatchPassword = await userExist.comparePassword(password);
+    if (!isMatchPassword)
+        return res.send("Invalid Email Or Password");
 };
