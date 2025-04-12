@@ -99,4 +99,11 @@ export const Login = async (req, res) => {
     const isMatchPassword = await userExist.comparePassword(password);
     if (!isMatchPassword)
         return res.send("Invalid Email Or Password");
+    const token = CreateToken(userExist._id, userExist.email);
+    res.cookie('token_id', token, {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "strict", // CSRF protection
+        maxAge: 24 * 60 * 60 * 1000 // 1 day
+    });
 };

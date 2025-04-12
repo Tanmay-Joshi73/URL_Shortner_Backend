@@ -7,9 +7,11 @@ import bodyParser from 'body-parser';
 import logger from './Logger/Logger.js';
 import UserAcccsessable from './routes/UserRoutes.js';
 import cors from "cors";
+import morgan from "morgan";
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
+app.use(morgan('dev')); // or 'combined', 'tiny', etc.
 app.use('/api', router);
 app.use('/', UserAcccsessable);
 const Start = async () => {
