@@ -64,3 +64,4 @@
 [2025-04-05T16:02:32.976Z] [31MERROR[39M: ❌ Error shortening URL: E11000 duplicate key error collection: test.urls index: LongUrl_1 dup key: { LongUrl: "https://v0.dev/chat/ui-for-url-shortner-Lpzoa9nqQEe" }
 [2025-04-05T16:02:35.260Z] [31MERROR[39M: ❌ Error shortening URL: E11000 duplicate key error collection: test.urls index: LongUrl_1 dup key: { LongUrl: "https://v0.dev/chat/ui-for-url-shortner-Lpzoa9nqQEe" }
 [2025-04-05T16:02:47.615Z] [31MERROR[39M: ❌ Error shortening URL: E11000 duplicate key error collection: test.urls index: LongUrl_1 dup key: { LongUrl: "https://v0.dev/chat/ui-for-url-shortner-Lpzoa9nqQEe" }
+[2025-04-16T06:29:33.578Z] [31MERROR[39M: ❌ Error shortening URL: E11000 duplicate key error collection: test.urls index: LongUrl_1 dup key: { LongUrl: "https://monkeytype.com/" }
