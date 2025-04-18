@@ -41,7 +41,7 @@ export const CreateToken=async(_id:Types.ObjectId,email:string):Promise<string>=
                 process.env.JWT_SECRET!,
                 { expiresIn: "15d" }
               );       
-        
+        console.log('token',_id.toString())
         return token
         
 }

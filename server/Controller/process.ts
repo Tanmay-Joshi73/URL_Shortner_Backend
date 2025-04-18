@@ -1,10 +1,13 @@
-import { Request, Response } from "express";
+import { NextFunction, Request, Response } from "express";
 import { redisClient } from "../Config/config.js";
 import logger from "../Logger/Logger.js";
+import jwt from "jsonwebtoken"
 import { Urls } from "../Model/Process.js";
 import mongoose, { Types } from "mongoose";
 import { userCollection as userData } from "../Model/UserSchema.js";
 import { CreateToken,generateShortCode } from "../Controller/Functions.js";
+import { triggerAsyncId } from "async_hooks";
+import { decode } from "punycode";
 
 export const Url_Shorten = async (req: Request, res: Response): Promise<any> => {
     const { URL } = req.body;
@@ -102,9 +105,9 @@ export const ShowUrl = async (req: Request, res: Response): Promise<any> => {
 };
 
 // User management functions remain the same
-export const CreateUser = async (req: Request, res: Response): Promise<any> => {
+export const CreateUser = async (req: Request, res: Response):Promise<any> => {
     const { username, password, email } = req.body;
-    
+    logger.info("user is craeted")
     if (!username || !password || !email) {
         return res.status(400).send('Please provide all required data');
     }
@@ -116,16 +119,17 @@ export const CreateUser = async (req: Request, res: Response): Promise<any> => {
         }
 
         const newUser = await userData.create({ username, email, password });
-        const token = CreateToken(newUser._id as Types.ObjectId, newUser.email);
-        
+        logger.info(newUser)
+        console.log('userid at the time of creation',newUser)
+        const token = await CreateToken(newUser._id as Types.ObjectId, newUser.email);
         res.cookie('token_id', token, {
             httpOnly: true,
-            secure: process.env.NODE_ENV === "production",
-            sameSite: "strict",
+            secure: false,
+            sameSite: "none",
             maxAge: 24 * 60 * 60 * 1000
         });
-
-        return res.status(201).json({ message: "User created successfully" });
+        logger.info("before sending the data to the client")
+        return res.status(201).json({ data: true });
     } catch (error) {
         logger.error("❌ Error creating user:", error);
         return res.status(500).json({ error: "Internal server error" });
@@ -159,10 +163,57 @@ export const Login = async (req: Request, res: Response): Promise<any> => {
             sameSite: "strict",
             maxAge: 24 * 60 * 60 * 1000
         });
-
+       
         return res.json({ message: "Logged in successfully" });
     } catch (error) {
         logger.error("❌ Error during login:", error);
         return res.status(500).json({ error: "Internal server error" });
     }
 };
+
+export const Check = async (req: Request, res: Response, next: NextFunction): Promise<any> => {
+    const token = req.cookies?.token_id;
+    console.log("🔍 Cookies received:", req.cookies);
+  
+    if (!token) {
+      console.log("❌ No token found in cookies");
+      return res.status(401).json({ authenticated: false });
+    }
+  
+    try {
+      const decoded = jwt.verify(token, process.env.JWT_SECRET!) as {
+        id: string;
+        email: string;
+        iat: number;
+        exp: number;
+      };
+  
+      console.log("✅ Token decoded:", decoded);
+  
+      const currentTimeInSec = Math.floor(Date.now() / 1000);
+      if (decoded.exp < currentTimeInSec) {
+        console.log("❌ Token expired");
+        return res.status(401).json({ authenticated: false });
+      }
+  
+      const userId = new Types.ObjectId(decoded.id);
+      console.log("🔐 Converted ObjectId:", userId);
+  
+      const user = await userData.findById(userId);
+      if (!user) {
+        console.log("❌ User not found in DB");
+        return res.status(404).json({ authenticated: false, message: "User not found" });
+      }
+  
+      console.log("✅ User found:", user.username);
+  
+      // You can attach the user to the request object here if needed
+      // (req as any).user = user;
+  
+      return res.status(200).json({ authenticated: true, user });
+  
+    } catch (error) {
+      console.error("❌ Token verification failed:", error);
+      return res.status(401).json({ authenticated: false });
+    }
+  };

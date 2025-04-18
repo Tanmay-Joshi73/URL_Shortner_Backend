@@ -46,7 +46,7 @@ export default function UrlShortenerPage() {
       }
 
       fetchShortenedUrls()
-      const interval = setInterval(fetchShortenedUrls, 1000)
+      const interval = setInterval(fetchShortenedUrls, 20000)
       return () => clearInterval(interval)
     }
 

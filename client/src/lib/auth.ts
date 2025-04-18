@@ -2,7 +2,7 @@
 
 import Cookies from "js-cookie"
 import { jwtDecode } from "jwt-decode"
-
+import axios from "axios"
 interface JwtPayload {
   exp: number
   [key: string]: any
@@ -12,31 +12,18 @@ interface JwtPayload {
  * Check if the user is authenticated by verifying the JWT token in cookies
  * @returns {Promise<boolean>} True if authenticated, false otherwise
  */
-export const checkAuth = async (): Promise<boolean> => {
+export const checkAuth = async (): Promise<any> => {
   try {
-    // Get the JWT token from cookies
-    const token = Cookies.get("jwt") // Adjust the cookie name based on your backend implementation
-
-    if (!token) {
-      return false
-    }
-
-    // Decode the token to check expiration
-    const decoded = jwtDecode<JwtPayload>(token)
-
-    // Check if token is expired
-    const currentTime = Date.now() / 1000
-    if (decoded.exp < currentTime) {
-      // Token is expired
-      Cookies.remove("jwt")
-      return false
-    }
-
-    return true
+    const res = await axios.get("http://localhost:8000/api/CookieCheck", {
+      withCredentials: true, // 👈 important to send cookies
+    })
+    return res;
+    
   } catch (error) {
     console.error("Auth check error:", error)
     return false
   }
+
 }
 
 /**

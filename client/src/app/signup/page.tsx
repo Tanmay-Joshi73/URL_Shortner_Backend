@@ -27,13 +27,16 @@ export default function SignupPage() {
         username: firstName,
         email,
         password,
+        
+      },{
+        withCredentials:true
       })
-
+      
       if (response.data) {
         toast.success("Account created successfully!")
         // After a short delay, redirect to login
         setTimeout(() => {
-          router.push("/login")
+          router.push("/Url_Shortener")
         }, 1000)
       }
     } catch (error) {
