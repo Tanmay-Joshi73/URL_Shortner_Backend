@@ -318,3 +318,181 @@
   __v: 0
 }
 [2025-04-18T04:58:19.347Z] [32MINFO[39M: before sending the data to the client
+[2025-04-18T10:49:52.785Z] [32MINFO[39M: user is craeted
+[2025-04-18T10:49:53.041Z] [32MINFO[39M: {
+  username: 'Tanmay Santosh Joshi',
+  email: 'tanmayjoshi072@gmail.com',
+  password: '$2b$10$8HYgT3rWYIO1Bang7TM5gOkiTopvfTjaujSkFWALX.c.S3Vca9vAS',
+  _id: new ObjectId('68022e50065349bcec1c0b34'),
+  createdAt: 2025-04-18T10:49:52.823Z,
+  __v: 0
+}
+[2025-04-18T10:49:53.061Z] [32MINFO[39M: before sending the data to the client
+[2025-04-18T10:53:54.791Z] [32MINFO[39M: user is craeted
+[2025-04-18T10:53:55.145Z] [32MINFO[39M: {
+  username: 'Tanmay Santo',
+  email: 'tanmayjosh73@gmail.com',
+  password: '$2b$10$HGrqEp//NiBHX0jSHGRNp.csIdJuBIaCj9usCmOHVKpBdl54Gww0y',
+  _id: new ObjectId('68022f426fb17efb76a9a7dd'),
+  createdAt: 2025-04-18T10:53:54.822Z,
+  __v: 0
+}
+[2025-04-18T10:53:55.157Z] [32MINFO[39M: before sending the data to the client
+[2025-04-18T10:58:04.465Z] [32MINFO[39M: user is craeted
+[2025-04-18T10:58:04.758Z] [32MINFO[39M: {
+  username: 'Tanmay',
+  email: 'tanmayjoshi072@gmail.com',
+  password: '$2b$10$KerGPJZ3o/2e7/xF1M8TveeXMO1CZC6ZX/IsoG0Xw3H47mnaoxaPi',
+  _id: new ObjectId('6802303cb76915d626f48f95'),
+  createdAt: 2025-04-18T10:58:04.513Z,
+  __v: 0
+}
+[2025-04-18T10:58:04.774Z] [32MINFO[39M: before sending the data to the client
+[2025-04-18T11:00:39.670Z] [32MINFO[39M: user is craeted
+[2025-04-18T11:00:39.917Z] [32MINFO[39M: {
+  username: 'Tanmay Santosh Joshi',
+  email: 'tanmayjoshi072@gmail.com',
+  password: '$2b$10$BbFYTFZV7KcquzrgxUl7EuUNmN1LBI66SVneTdfCHyAt9kVo4DDRm',
+  _id: new ObjectId('680230d7a8b752b85633d999'),
+  createdAt: 2025-04-18T11:00:39.718Z,
+  __v: 0
+}
+[2025-04-18T11:00:39.928Z] [32MINFO[39M: before sending the data to the client
+[2025-04-18T11:03:20.453Z] [32MINFO[39M: user is craeted
+[2025-04-18T11:03:20.789Z] [32MINFO[39M: {
+  username: 'Tanmay',
+  email: 'Terebinamujecheennahiattabe@gmail.com',
+  password: '$2b$10$EiNsVzNmJNKO1BclsnxQ2ebrpdKQWUkhP.PmUIUKbKLQYEJ2gzAbe',
+  _id: new ObjectId('680231781dc18e21399a870c'),
+  createdAt: 2025-04-18T11:03:20.525Z,
+  __v: 0
+}
+[2025-04-18T11:03:20.814Z] [32MINFO[39M: before sending the data to the client
+[2025-04-18T11:05:59.045Z] [32MINFO[39M: user is craeted
+[2025-04-18T11:05:59.624Z] [32MINFO[39M: {
+  username: 'Tanmay223',
+  email: 'sample@gmail.com',
+  password: '$2b$10$wB7eYWePqSjy9cMzDMHNDewL6ye43oivKQPIbUfDviPclAbJVVXvO',
+  _id: new ObjectId('68023217bbca373bcad55879'),
+  createdAt: 2025-04-18T11:05:59.125Z,
+  __v: 0
+}
+[2025-04-18T11:05:59.642Z] [32MINFO[39M: before sending the data to the client
+[2025-04-18T11:17:07.097Z] [32MINFO[39M: user is craeted
+[2025-04-18T11:17:07.370Z] [32MINFO[39M: {
+  username: 'tama',
+  email: 'llaya@gmail.com',
+  password: '$2b$10$SjHsEcSXRQYq3RtfgdZYW.xSRDo3e.hi812d52PeLhYXfaXfo1G0u',
+  _id: new ObjectId('680234b387d7f91ebc2619f7'),
+  createdAt: 2025-04-18T11:17:07.148Z,
+  __v: 0
+}
+[2025-04-18T11:17:07.399Z] [32MINFO[39M: before sending the data to the client
+[2025-04-19T03:56:10.784Z] [32MINFO[39M: {
+  username: 'Tanmay Joshi',
+  email: 'tanmayjoshi072@gmail.com',
+  password: '$2b$10$t.ck7vEYtc/Wa9rh6yqyyuohQoTr2.NyiY3NftrA2pqmbAfiEClly',
+  _id: new ObjectId('68031edad853105fbcce7803'),
+  createdAt: 2025-04-19T03:56:10.627Z,
+  __v: 0
+}
+[2025-04-19T03:56:10.800Z] [32MINFO[39M: before sending the data to the client
+[2025-04-19T04:13:10.616Z] [32MINFO[39M: {
+  username: 'Tanmay Joshi2234',
+  email: 'epicdavinci2@fearlessmails.com',
+  password: '$2b$10$5DG9YKGDV2TEYkyKB8vmLu6c9M7AZfE4fnQC16IR9va5auDo34GM6',
+  _id: new ObjectId('680322d65fbf2604c966ac0c'),
+  createdAt: 2025-04-19T04:13:10.358Z,
+  __v: 0
+}
+[2025-04-19T04:13:10.661Z] [32MINFO[39M: before sending the data to the client
+[2025-04-19T04:14:37.046Z] [32MINFO[39M: {
+  username: 'Tanmay Santosh Joshi',
+  email: 'tanmayjosh73@gmail.com',
+  password: '$2b$10$tSsfllY7RLC2MoH8lSMxhO97bVF1CIG9WivWFlo9d8J5OO8ROR5eO',
+  _id: new ObjectId('6803232c1f9a39a4a55edf75'),
+  createdAt: 2025-04-19T04:14:36.760Z,
+  __v: 0
+}
+[2025-04-19T04:14:37.100Z] [32MINFO[39M: before sending the data to the client
+[2025-04-19T04:17:17.595Z] [32MINFO[39M: {
+  username: 'Tanmay Santosh Joshi',
+  email: 'TJ@gmail.com',
+  password: '$2b$10$.yBjcXd.7U.wwwFh2b0xiumvjx5Kl/MISmYfNKxP/C8qcEhIML7eO',
+  _id: new ObjectId('680323cd2c3d232f19ffedd6'),
+  createdAt: 2025-04-19T04:17:17.376Z,
+  __v: 0
+}
+[2025-04-19T04:17:17.699Z] [32MINFO[39M: before sending the data to the client
+[2025-04-19T04:18:38.132Z] [32MINFO[39M: {
+  username: 'itchiethce',
+  email: 'iit@gmail.com',
+  password: '$2b$10$huoH.tv94VdbfbxjIuy5nOqtqOCubjctxRlcjKAe0Qdzg56dMwSi.',
+  _id: new ObjectId('6803241d2c3d232f19ffeddb'),
+  createdAt: 2025-04-19T04:18:37.918Z,
+  __v: 0
+}
+[2025-04-19T04:18:38.165Z] [32MINFO[39M: before sending the data to the client
+[2025-04-19T04:21:07.287Z] [32MINFO[39M: {
+  username: 'Tanmay Santosh Joshi',
+  email: 'tanmayjoshi072@gmail.com',
+  password: '$2b$10$SvPVcjg63NvgMXL6bltP5.NDX2J4Fe08jcFsh1g8qB5u1ATJMLwQe',
+  _id: new ObjectId('680324b371933dccebd21552'),
+  createdAt: 2025-04-19T04:21:07.119Z,
+  __v: 0
+}
+[2025-04-19T04:21:07.313Z] [32MINFO[39M: before sending the data to the client
+[2025-04-19T04:21:34.986Z] [32MINFO[39M: {
+  username: 'Pranav Patil',
+  email: 'tanmayjoshi072@gmail.com3',
+  password: '$2b$10$zL1RInzIbV3igoicluanBu/BCugtla7Y6PD99zt2p7Xv.YsB.MhH6',
+  _id: new ObjectId('680324ce71933dccebd21557'),
+  createdAt: 2025-04-19T04:21:34.846Z,
+  __v: 0
+}
+[2025-04-19T04:21:35.015Z] [32MINFO[39M: before sending the data to the client
+[2025-04-19T04:46:51.539Z] [32MINFO[39M: {
+  username: 'heyMyameIStama',
+  email: 'sighupbro@gmail.com',
+  password: '$2b$10$vplpp7r4hwyG842VG7W.LewgT7o2rcbwarON/ScPSNn8Tuj2JEcVO',
+  _id: new ObjectId('68032abb95e171e766f7a0da'),
+  createdAt: 2025-04-19T04:46:51.374Z,
+  __v: 0
+}
+[2025-04-19T04:46:51.569Z] [32MINFO[39M: before sending the data to the client
+[2025-04-19T04:48:51.511Z] [32MINFO[39M: {
+  username: 'Tanmay',
+  email: 'migexi6722@barodis.com',
+  password: '$2b$10$SDeh2IcccHQtGEQ8jpLZ.O0oYrvNTDbQ6qVqIkvRRW51DDJP83Yty',
+  _id: new ObjectId('68032b338f3a6d0e5640f395'),
+  createdAt: 2025-04-19T04:48:51.262Z,
+  __v: 0
+}
+[2025-04-19T04:48:51.553Z] [32MINFO[39M: before sending the data to the client
+[2025-04-19T04:49:36.476Z] [32MINFO[39M: {
+  username: 'heyifuckedpprettypahrd',
+  email: 'gmail@gmail.com',
+  password: '$2b$10$sqftcVjHv2zWwQmkbUxdd.wTCthpK49EbJF0LMf9f/02WVn3WQV/O',
+  _id: new ObjectId('68032b60cc38b2c4aea6ac29'),
+  createdAt: 2025-04-19T04:49:36.226Z,
+  __v: 0
+}
+[2025-04-19T04:49:36.514Z] [32MINFO[39M: before sending the data to the client
+[2025-04-19T04:51:29.188Z] [32MINFO[39M: {
+  username: 'Tanmay',
+  email: 'epicdavinci2@fearlessmails.com',
+  password: '$2b$10$dVqlHF/ZJn/RHobmXXB/XergfGCFzU9wXDa27GqivaDYhyOOd0hb6',
+  _id: new ObjectId('68032bd00dd9bc556b41460e'),
+  createdAt: 2025-04-19T04:51:28.945Z,
+  __v: 0
+}
+[2025-04-19T04:51:29.224Z] [32MINFO[39M: before sending the data to the client
+[2025-04-19T04:56:14.612Z] [32MINFO[39M: {
+  username: 'Pranav Patil',
+  email: 'tanmayjoshi072@gmail.com',
+  password: '$2b$10$wxMbNlI2phrERk2Ae5WPqeMZ55DOytrqZrCOAIL1LPLRy3aWm38Py',
+  _id: new ObjectId('68032ceec9138adcbaa32494'),
+  createdAt: 2025-04-19T04:56:14.422Z,
+  __v: 0
+}
+[2025-04-19T04:56:14.644Z] [32MINFO[39M: before sending the data to the client

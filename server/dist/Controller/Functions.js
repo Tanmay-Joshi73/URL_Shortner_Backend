@@ -1,6 +1,7 @@
 import { customAlphabet } from "nanoid";
 import jwt from "jsonwebtoken";
 import { createHash } from "crypto";
+import { userCollection as userData } from "../Model/UserSchema.js";
 export const Random = (URL) => {
     const Random = customAlphabet("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789", 6);
     const id = Random();
@@ -23,18 +24,24 @@ export const generateShortCode = (URL) => {
     return result;
 };
 export const CreateToken = async (_id, email) => {
-    const token = jwt.sign({ id: _id.toString(), email: email }, process.env.JWT_SECRET, { expiresIn: "15d" });
-    console.log('token', _id.toString());
+    const idStr = _id.toString(); // 🔍 Convert ObjectId to string
+    const currentUser = await userData.findById(_id);
+    if (!currentUser)
+        return "User Not Found";
+    currentUser.token = idStr;
+    currentUser.save();
+    console.log("✅ Creating token for ID:", idStr);
+    const token = jwt.sign({ id: idStr, email }, process.env.JWT_SECRET, { expiresIn: "15d" });
     return token;
 };
-export const Verify = async (req, res, next) => {
-    const token = req.cookies.token_id;
-    if (!token) {
-        return res.send('Please Login Or Sign Up First');
-    }
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    if (decoded) {
-        next();
-    }
-    return res.send('please SignUp or Login');
-};
+// export const Verify=async(req:Request,res:Response,next:NextFunction):Promise<any>=>{
+// const token=req.cookies.token_id;
+// if(!token){
+//   return res.send('Please Login Or Sign Up First')
+// }
+// const decoded=jwt.verify(token,process.env.JWT_SECRET as string)
+// if(decoded){
+//         next()
+// }
+// return res.send('please SignUp or Login')
+// }
