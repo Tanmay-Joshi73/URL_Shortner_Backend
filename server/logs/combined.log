@@ -318,3 +318,36 @@
   __v: 0
 }
 [2025-04-18T04:58:19.347Z] [32MINFO[39M: before sending the data to the client
+[2025-04-19T05:11:01.801Z] [32MINFO[39M: user is craeted
+[2025-04-19T05:11:02.119Z] [32MINFO[39M: {
+  username: 'Tanmay Santosh Joshi',
+  email: 'tanmayjjoshi72@gmail.com',
+  password: '$2b$10$/e.3V6MUN56yoToDS2ECS.H.ODfA1jxk14wknmBBfWKBeH1cxUUOO',
+  _id: new ObjectId('680330657f3fdc5fd518be1d'),
+  createdAt: 2025-04-19T05:11:01.859Z,
+  __v: 0
+}
+[2025-04-19T05:11:02.159Z] [32MINFO[39M: before sending the data to the client
+[2025-04-19T05:14:19.787Z] [32MINFO[39M: user is craeted
+[2025-04-19T05:14:29.867Z] [32MINFO[39M: user is craeted
+[2025-04-19T05:14:53.654Z] [32MINFO[39M: user is craeted
+[2025-04-19T05:14:53.988Z] [32MINFO[39M: {
+  username: 'tanmay',
+  email: 'tanmayjoshi0722@gmail.com',
+  password: '$2b$10$I0WIVYkv94hX0JhSU6iYxO5f2lRqaFyPuiFDCSxfCW0fhJNVfU6KS',
+  _id: new ObjectId('6803314dee17d8d510f306a7'),
+  createdAt: 2025-04-19T05:14:53.691Z,
+  __v: 0
+}
+[2025-04-19T05:14:54.033Z] [32MINFO[39M: before sending the data to the client
+[2025-04-19T05:18:57.881Z] [32MINFO[39M: user is craeted
+[2025-04-19T05:18:58.234Z] [32MINFO[39M: {
+  username: 'Tanmay Santosh Joshi',
+  email: 'tanmayjoshi072@gmail.com',
+  password: '$2b$10$cFjTBXcJgOFznxoSNkWCi.ij6XbH3xNHDblEUiaWg9G4.qs3wpITC',
+  _id: new ObjectId('68033241347d29e0e91a4f40'),
+  createdAt: 2025-04-19T05:18:57.942Z,
+  __v: 0
+}
+[2025-04-19T05:18:58.276Z] [32MINFO[39M: before sending the data to the client
+[2025-04-19T05:36:36.526Z] [32MINFO[39M: user is craeted

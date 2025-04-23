@@ -5,6 +5,7 @@ import { promises } from "dns"
 import { NextFunction ,Request,Response} from "express"
 import { decode } from "punycode"
 import { createHash } from "crypto"
+import { userCollection as userData } from "../Model/UserSchema.js"
 export const Random=(URL:string)=>{
     
         const Random=  customAlphabet("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789", 6)
@@ -34,28 +35,33 @@ export const generateShortCode = (URL: string): string => {
         return result;
     };
     
-export const CreateToken=async(_id:Types.ObjectId,email:string):Promise<string>=>{
-
+    export const CreateToken = async (_id: Types.ObjectId, email: string): Promise<string> => {
+        const idStr = _id.toString(); // 🔍 Convert ObjectId to string
+        const currentUser=await userData.findById(_id)
+        if(!currentUser) return "User Not Found"
+        currentUser.token=idStr;
+        // currentUser.save()
+        console.log("✅ Creating token for ID:", idStr);
+      
         const token = jwt.sign(
-                { id: _id.toString(), email:email },
-                process.env.JWT_SECRET!,
-                { expiresIn: "15d" }
-              );       
-        console.log('token',_id.toString())
-        return token
-        
-}
+          { id: idStr, email },
+          process.env.JWT_SECRET!,
+          { expiresIn: "15d" }
+        );
+      
+        return token;
+      }
 interface user_info{
         user:string
 }
-export const Verify=async(req:Request,res:Response,next:NextFunction):Promise<any>=>{
-const token=req.cookies.token_id;
-if(!token){
-  return res.send('Please Login Or Sign Up First')
-}
-const decoded=jwt.verify(token,process.env.JWT_SECRET as string)
-if(decoded){
-        next()
-}
-return res.send('please SignUp or Login')
-}
+// export const Verify=async(req:Request,res:Response,next:NextFunction):Promise<any>=>{
+// const token=req.cookies.token_id;
+// if(!token){
+//   return res.send('Please Login Or Sign Up First')
+// }
+// const decoded=jwt.verify(token,process.env.JWT_SECRET as string)
+// if(decoded){
+//         next()
+// }
+// return res.send('please SignUp or Login')
+// }

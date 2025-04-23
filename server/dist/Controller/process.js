@@ -1,8 +1,6 @@
 import { redisClient } from "../Config/config.js";
 import logger from "../Logger/Logger.js";
-import jwt from "jsonwebtoken";
 import { Urls } from "../Model/Process.js";
-import { Types } from "mongoose";
 import { userCollection as userData } from "../Model/UserSchema.js";
 import { CreateToken, generateShortCode } from "../Controller/Functions.js";
 export const Url_Shorten = async (req, res) => {
@@ -145,30 +143,36 @@ export const Login = async (req, res) => {
 };
 export const Check = async (req, res, next) => {
     const token = req.cookies?.token_id;
+    console.log(req.cookies);
     console.log("🔍 Cookies received:", req.cookies);
     if (!token) {
         console.log("❌ No token found in cookies");
         return res.status(401).json({ authenticated: false });
     }
     try {
-        const decoded = jwt.verify(token, process.env.JWT_SECRET);
-        console.log("✅ Token decoded:", decoded);
-        const currentTimeInSec = Math.floor(Date.now() / 1000);
-        if (decoded.exp < currentTimeInSec) {
-            console.log("❌ Token expired");
-            return res.status(401).json({ authenticated: false });
-        }
-        const userId = new Types.ObjectId(decoded.id);
-        console.log("🔐 Converted ObjectId:", userId);
-        const user = await userData.findById(userId);
-        if (!user) {
-            console.log("❌ User not found in DB");
-            return res.status(404).json({ authenticated: false, message: "User not found" });
-        }
-        console.log("✅ User found:", user.username);
+        //   const decoded = jwt.verify(token, process.env.JWT_SECRET!) as {
+        //     id: string;
+        //     email: string;
+        //     iat: number;
+        //     exp: number;
+        //   };
+        //   console.log("✅ Token decoded:", decoded);
+        //   const currentTimeInSec = Math.floor(Date.now() / 1000);
+        //   if (decoded.exp < currentTimeInSec) {
+        // console.log("❌ Token expired");
+        // return res.status(401).json({ authenticated: false });
+        //   }
+        //   const userId = new Types.ObjectId(decoded.id);
+        //   console.log("🔐 Converted ObjectId:", userId);
+        //   const user = await userData.findById(userId);
+        //   if (!user) {
+        // console.log("❌ User not found in DB");
+        // return res.status(404).json({ authenticated: false, message: "User not found" });
+        //   }
+        //   console.log("✅ User found:", user.username);
         // You can attach the user to the request object here if needed
         // (req as any).user = user;
-        return res.status(200).json({ authenticated: true, user });
+        //   return res.status(200).json({ authenticated: true, user });
     }
     catch (error) {
         console.error("❌ Token verification failed:", error);

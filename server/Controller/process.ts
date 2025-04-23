@@ -173,6 +173,7 @@ export const Login = async (req: Request, res: Response): Promise<any> => {
 
 export const Check = async (req: Request, res: Response, next: NextFunction): Promise<any> => {
     const token = req.cookies?.token_id;
+    console.log(req.cookies)
     console.log("🔍 Cookies received:", req.cookies);
   
     if (!token) {
@@ -181,36 +182,36 @@ export const Check = async (req: Request, res: Response, next: NextFunction): Pr
     }
   
     try {
-      const decoded = jwt.verify(token, process.env.JWT_SECRET!) as {
-        id: string;
-        email: string;
-        iat: number;
-        exp: number;
-      };
+    //   const decoded = jwt.verify(token, process.env.JWT_SECRET!) as {
+    //     id: string;
+    //     email: string;
+    //     iat: number;
+    //     exp: number;
+    //   };
   
-      console.log("✅ Token decoded:", decoded);
+    //   console.log("✅ Token decoded:", decoded);
   
-      const currentTimeInSec = Math.floor(Date.now() / 1000);
-      if (decoded.exp < currentTimeInSec) {
-        console.log("❌ Token expired");
-        return res.status(401).json({ authenticated: false });
-      }
+    //   const currentTimeInSec = Math.floor(Date.now() / 1000);
+    //   if (decoded.exp < currentTimeInSec) {
+        // console.log("❌ Token expired");
+        // return res.status(401).json({ authenticated: false });
+    //   }
   
-      const userId = new Types.ObjectId(decoded.id);
-      console.log("🔐 Converted ObjectId:", userId);
+    //   const userId = new Types.ObjectId(decoded.id);
+    //   console.log("🔐 Converted ObjectId:", userId);
   
-      const user = await userData.findById(userId);
-      if (!user) {
-        console.log("❌ User not found in DB");
-        return res.status(404).json({ authenticated: false, message: "User not found" });
-      }
+    //   const user = await userData.findById(userId);
+    //   if (!user) {
+        // console.log("❌ User not found in DB");
+        // return res.status(404).json({ authenticated: false, message: "User not found" });
+    //   }
   
-      console.log("✅ User found:", user.username);
+    //   console.log("✅ User found:", user.username);
   
       // You can attach the user to the request object here if needed
       // (req as any).user = user;
   
-      return res.status(200).json({ authenticated: true, user });
+    //   return res.status(200).json({ authenticated: true, user });
   
     } catch (error) {
       console.error("❌ Token verification failed:", error);

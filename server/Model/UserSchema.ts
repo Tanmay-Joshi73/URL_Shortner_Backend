@@ -5,6 +5,7 @@ interface Iuser extends mongoose.Document{
   username:string,
   email:string,
   password:string,
+  token:string
   createdAt:Date,
   comparePassword(candidatePassword : string):Promise<boolean>
 }
@@ -15,7 +16,8 @@ const userSchema = new mongoose.Schema<Iuser>({
      required:true
     },
     email: { type: String, unique: true },
-    password: String, // hashed
+    password: String, // hashed,
+    token:{type:String,reqired:true},
     createdAt: { type: Date, default: Date.now }
   });
 

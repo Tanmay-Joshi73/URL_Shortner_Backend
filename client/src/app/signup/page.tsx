@@ -36,7 +36,7 @@ export default function SignupPage() {
         toast.success("Account created successfully!")
         // After a short delay, redirect to login
         setTimeout(() => {
-          router.push("/Url_Shortener")
+          router.push("/")
         }, 1000)
       }
     } catch (error) {
